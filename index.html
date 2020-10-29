@@ -9,7 +9,7 @@
 <link rel="stylesheet" href="css/main.css">
 <script src="js/jquery-1.11.3.min.js"></script>
 <script src="js/jquery.smooth-scroll.min.js"></script>
-<script src="js/common.js"></script>
+<script src="js/main.js"></script>
 <!-- 슬라이드용 -->
 <link rel="stylesheet" href="css/swiper.min.css">
 <script src="js/rollmain.js"></script>
@@ -17,102 +17,89 @@
 <!-- //슬라이드용 --> 
 <style>
 /* 모바일영역 */
-/* 헤더영역 */
-.on {
-	background: #32353d;
-}
-header {
-	height: 90px;
+/* 본문 컨테이너 영역 */
+#container, #footer, .hdd, .quick_area{
 	text-align: center;
-	z-index: 200;
-	background: rgba(0,0,0,0.5);
-	position: absolute;
-	left:0; top:0;
-	width:100%;
 }
-.box_inner {
-	width: 100%; margin: 0 auto;
+#container {
+	position: relative;
+	width: 100%;
+	padding-bottom: 30px;
 }
-/* 로고영역 */
-.header_area h1 {
+/* pc용 슬라이드 영역 숨김처리 */
+.main_rolling_pc{display: none;}
+/* 모바일 슬라이드 영역 */
+.main_rolling_mobile{display: block;}
+.swiper-slide img{width: 100%;}
+.swiper-pagination-bullet{
+	width: 5px;
+	height: 5px;
+	margin: 0 3px !important;
+	background: #fff;
+	opacity: 0.2;
+}
+.swiper-pagination-bullet-active{
+	opacity: 1;
+}
+/* //모바일 슬라이드 영역 */
+/* 갤러리 최근 게시물 영역 */
+.about_area h2{
+	padding: 27px 0 25px;
+	font-size: 20px;
+	text-align: center;
+}
+.about_area h2 b{
+	display: block;
+	padding-top: 10px;
+}
+.about_box{	background: #fff;}
+.place_list li{
 	float: none;
 	width: 100%;
-	height: 50px;
-	text-align: center;
-	padding: 3px 0 0;
+	margin: 0;
+	box-sizing: border-box;
+	padding: 0 20px;
 }
-.header_area h1 a {
+.place_list li img{
+	width: 100%;
+}
+.place_list li h3{
+	font-weight: bold;
+	font-size: 18px;
+	padding-top: 25px;
+	color: #000;
+}
+.place_list p.txt{
+	padding: 10px 50px 30px;
+	line-height: 1.4;
+	box-sizing: border-box;
+	width: 100%;
+	overflow: hidden;
+	word-break: keep-all;
+	color: #666;
+}
+.place_list li .view{
+	padding-bottom: 10px;
+	margin: 0 0 30px;
 	display: inline-block;
-	width: 150px;
-	height: 80px;
-	background: url(./img/main_logo.png) no-repeat;
-	background-size: 150px 40px !important;
-	background-position: center center !important;
-	text-indent: -9999px;
-	overflow: hidden;
+	padding-top: 5px;
+	border-top: 2px solid #333;
+	color: #666;
 }
-/* //로고영역 */
+/* //갤러리 최근 게시물 영역 */
 
-/* 상단 메뉴 영역 */
-.openMOgnb{
-	display: block;
-	position: absolute;
-	left: 15px;
-	top: 35px;
-	width: 25px;
-	height: 16px;
-}
-.hdd {
-	/* 특수한 상황에 이미지가 안보일때 메뉴 글씨가 보이게끔 , 시각장애인을 위해 글씨를 지우지않음 */
-	text-indent: -9999px;
-	position: absolute;
-}
-.openMOgnb span{
-	box-sizing: border-box; 
-	display: block;
-	width: 25px;
-	height: 3px;
-	margin-bottom: 4px;
-	border-radius: 10px;
-	background-color: #fff;
-}
-.openMOgnb span + span {
-	width: 17px;
-}
-.openMOgnb span:last-child{
-	width: 25px;
-	margin-bottom: 0px;
-}
-.header_cont{
-	float: none;
-	width: 100%;
-	background-color: #31353d;
-	/* display: none; */
-}
-.closePop {
-	display: block;
-	position: absolute;
-	right: 0;
-	top: 15px;
-}
-.closePop a{
-	display: block;
-	width: 60px;
-	height: 60px;
-	text-indent: -9999px;
-	overflow: hidden;
-	background: url(./img/btn_closeMenu.png) no-repeat;
-	background-size: 60px;
-}
+/* 공지사항 최근게시물영역 */
 
-/* //상단메뉴 영역 */
+/* //공지사항 최근게시물영역 */
 
-/* //헤더영역 */
+/* //본문 컨테이너영역 */
 /* //모바일영역 */
 </style>
+<script>
+
+</script>
 </head>
 <body>
-
 <!-- 헤더에서푸터까지 -->
 <div id="wrap">
 	<!-- 헤더상단메뉴영역영역 -->
@@ -242,7 +229,7 @@ header {
 	
 		<!-- 갤러리최근게시물영역 -->
 		<div class="about_area">
-			<h2>OOOO OOOOO 스프링 <b>TOP 3</b></h2>
+			<h2>갤러리 최근게시물 <b>TOP 3</b></h2>
 			<div class="about_box">
 				<ul class="place_list box_inner clear">
 					<li><a href="#" onclick="$('.popup_base').css('height',$(document).height());$('.contact_pop').show();">
