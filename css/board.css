@@ -252,10 +252,11 @@
 	border: 1px solid #ccc;
 }
 .btn_line{
-	text-align: center;
+    text-align: center;
+    margin-bottom: 20px;
 }
 .appForm textarea{
-	height: 230px;
+	height: 245px;
 }
 /* //태블릿 + pc 용 */
 }
