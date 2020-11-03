@@ -137,27 +137,22 @@ $(document).ready(function(){
 		}
 		isOver111 = true;
 	});
-	// 대메뉴1 - gnb_depth2_1첫번재 서브메뉴 마우스 선택액션
 	$('.openAll3').focus(function(){
 		if(parseInt($('header').css('width'))>1055){
 			$('.gnb_depth2_3').fadeIn('fast');
 		}
 		isOver111 = true;
 	});
-	// 대메뉴1 - gnb_depth2_1 첫번째 서브메뉴 마우스 아웃액션
 	$('.openAll3').mouseout(function(){
 		isOver111 = false;
-		setTimeout("goHide1()",200); // 0.2초 후에 goHide1 함수 실행
+		setTimeout("goHide3()",200); // 0.2초 후에 goHide1 함수 실행
 	});
-	// 첫번재  서브메뉴 마우스 오버했을때 액션
 	$('.gnb_depth2_3').mouseover(function(){
 		isOver222 = true; //fadeOut 작동을 하지 않겠다는 명시적인 변수값
 	});
-	// 첫번째 서브메뉴 선택액션 focus < = > blur
 	$('.gnb_depth2_3').focus(function(){
 		isOver222 = true;
 	});
-	// 첫번째 서브메뉴 마우스 아웃액션
 	$('.gnb_depth2_3').mouseout(function(){
 		isOver222 = false; //fadeOut을 작동 하겠다는 명시적인 변수값
 		setTimeout("goHide3()",200);
