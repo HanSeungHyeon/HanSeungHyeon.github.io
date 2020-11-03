@@ -4,6 +4,14 @@
 - 파이어폭스 개발자도구의 스타일 탭사용
 - 기존 PC용 > 태블릿용 > 모바일용 CSS작업순서를 [모바일용 > 태블릿용 > PC용] 으로 변경작업
 #### 20201103(화)
+- 시만텍 웹 : 의미있는 태그 == html5 사용
+- header, footer, article, aside웹문서에 의미있는 영역 지정
+- white-space : nowrap : (아래)
+- 마지막 교시 입
+- 니다.
+- 만약에 white-space : wrap 이라면
+- 마지막 교시
+- 입니다.
 - vertical(수직) : top , middle , bottom
 -horizontal(수평) : left , center , right
 - 유효성검사 : 예전에는 자바스크립트처리
