@@ -8,7 +8,7 @@
   }
   .header_area h1 {
     float: left;
-    padding: 25px 0 0;
+    padding: 5px 0 0;
     padding-left: 20px;
     width: auto;
     height: inherit;
@@ -16,9 +16,9 @@
   }
   .header_area h1 a {
     display: block;
-    width: 270px;
-    height: 71px;
-    background-size: inherit !important;
+    width: 250px;
+    height: 100px;
+    background-size: 250px 100px !important;
   }
   .openMOgnb {
     display: none;
@@ -108,8 +108,8 @@
   }
   ul.viewImgList li {
     text-align: center;
-    height: 550px;
-    line-height: 550px;
+    height: 650px;
+    line-height: 650px;
     background-size: cover;
     width: 100%;
   }
@@ -119,21 +119,21 @@
   li.imglist0 {
     position: relative;
     z-index: 50;
-    background: url(../img/maple.jpg) no-repeat;
+    background: url(../img/slide1.jpg) no-repeat;
   }
   li.imglist1 {
     position: absolute;
     z-index: 10;
     left: 0;
     top: 0;
-    background: url(../img/img_slidecontents02.png) no-repeat;
+    background: url(../img/slide2.jpg) no-repeat;
   }
   li.imglist2 {
     position: absolute;
     z-index: 10;
     left: 0;
     top: 0;
-    background: url(../img/img_slidecontents03.png) no-repeat;
+    background: url(../img/slide4.jpg) no-repeat;
   }
   .roll_content {
     position: relative;

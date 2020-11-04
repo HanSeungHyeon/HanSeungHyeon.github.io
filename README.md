@@ -8,6 +8,7 @@
 - 테이블 display:none -> block
 - 테이블 display:none -> table-cell처리
 - 애로우함수 : 윈7에서 지원안함
+- placeholder : input-ms-placeholder 윈7지원
 #### 크로스브라우징 처리
 - 브라우저 E11, 크롬, 파이어폭스, 오페라
 - 브라우저 교차 검사 후 처리

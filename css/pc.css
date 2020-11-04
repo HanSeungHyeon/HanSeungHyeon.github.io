@@ -3,7 +3,7 @@
   /* PC영역 */
   /* 상단 로고,메뉴영역 */
   .header_area h1 {
-    padding-left: 0px;
+    padding-left: 5px;
   }
   .header_cont {
     width: 769px;
