@@ -41,6 +41,34 @@
 .css-radio:checked + label{
 	background-position: 0 -50px;
 }
+.checkbox_area{
+	padding-left: 20px;
+	height: 40px;
+	padding-top: 10px;
+	box-sizing: border-box;
+}
+.css-checkbox{
+	overflow: hidden;
+	position: absolute;
+	left: -1000px;
+	width: 1px;
+	height: 1px;
+}
+.css-checkbox + label{
+	display: inline-block;
+	height: 20px;
+	padding-left: 30px !important;
+	line-height: 20px !important;
+	background: url(./img/bg_checkbox.png)no-repeat 0 0;
+	background-size: 20px;
+	cursor: pointer;
+	font-size: 15px;
+	-moz-user-select: none;
+}
+.css-checkbox:checked + label{
+	background-position: 0 -20px;
+}
+
 </style>
 <script>
 $(document).ready(function() {
@@ -173,7 +201,7 @@ $(document).ready(function() {
 						</li>
 						<li class="clear">
 							<label for="agree_lbl" class="tit_lbl pilsoo_item">개인정보 활용동의</label>
-							<div class="app_content">
+							<div class="app_content checkbox_area">
 								<input type="checkbox" name="agree" class="css-checkbox" id="agree_lbl"required checked/>
 								<label for="agree_lbl">동의함</label>
 								</div>
