@@ -13,12 +13,44 @@
 <script src="js/jquery-1.11.3.min.js"></script>
 <script src="js/jquery.smooth-scroll.min.js"></script>
 <script src="js/main.js"></script>
+<!-- 유효성검사 -->
+<script src="js/additional-methods.js"></script>
+<script src="js/jquery.validate.js"></script>
 <style>
-
+.radio_area{
+	padding-left: 20px;
+	height: 40px;
+	padding-top: 10px;
+	box-sizing: border-box;
+}
+.css-radio{
+	overflow: hidden;
+	position: absolute;
+	left: -1000px;
+	width: 1px;
+	height: 1px;
+}
+.css-radio + label{
+	display: inline-block;
+	padding-left: 20px !important;
+	margin-right: 20px;
+	background: url(./img/bg_radio.png)no-repeat 0 0;
+	cursor: pointer;
+	font-size: 15px;
+}
+.css-radio:checked + label{
+	background-position: 0 -50px;
+}
 </style>
 <script>
 $(document).ready(function() {
-	
+	$(".appForm").validate();
+	$.extend($.validator.messages,{
+		required:"필수 항목입니다.",
+		email:"유효하지 않은 E-mail주소 입니다.",
+		equalTo:"같은 값을 다시 입력하세요.",
+		digits:"숫자만 입력 가능합니다."
+	});
 });
 </script>
 </head>
@@ -89,8 +121,8 @@ $(document).ready(function() {
 		<!-- 메인상단위치표시영역 -->
 		<div class="location_area customer">
 			<div class="box_inner">
-				<h2 class="tit_page">스프링 <span class="in">in</span> 회원가입</h2>
-				<p class="location">고객센터 <span class="path">/</span> 로그인</p>
+				<h2 class="tit_page">스프링 <span class="in">in</span> 자바</h2>
+				<p class="location">MEMBER <span class="path">/</span> 회원가입</p>
 				<ul class="page_menu clear">
 					<li><a href="#" class="on">회원가입</a></li>
 				</ul>
@@ -101,7 +133,7 @@ $(document).ready(function() {
 		<!-- 메인본문영역 -->
 		<div class="bodytext_area box_inner">
 			<!-- 폼영역 -->
-			<form method="POST" name="join_form" action="ljoin.html" class="appForm">
+			<form method="POST" name="join_form" action="join.html" class="appForm">
 				<fieldset>
 					<legend>회원가입폼</legend>
 					<p class="info_pilsoo pilsoo_item">필수입력</p>
@@ -114,9 +146,41 @@ $(document).ready(function() {
 							<label for="name_lbl" class="tit_lbl pilsoo_item">작성자명</label>
 							<div class="app_content"><input type="text" name="name" class="w100p" id="name_lbl" placeholder="이름을 입력해주세요" required/></div>
 						</li>
+						<li class="clear">
+							<label for="password_lbl" class="tit_lbl pilsoo_item">비밀번호</label>
+							<div class="app_content"><input type="password" name="password" class="w100p" id="password_lbl" placeholder="비밀번호를 입력해주세요" required/></div>
+						</li>
+						<li class="clear">
+							<label for="password_chk_lbl" class="tit_lbl pilsoo_item">비밀번호 확인</label>
+							<div class="app_content"><input type="password" name="password_chk class="w100p" id="password_chk_lbl" placeholder="비밀번호를 다시 입력해주세요" required/></div>
+						</li>
+						<li class="clear">
+							<label for="tel_lbl" class="tit_lbl pilsoo_item">연락처</label>
+							<div class="app_content"><input type="tel" name="tel" class="w100p" id="tel_lbl" placeholder="연락처'-'없이 숫자만 입력해주세요" required/></div>
+						</li>
+						<li class="clear">
+							<label for="gender_lbl" class="tit_lbl pilsoo_item">성별</label>
+							<div class="app_content radio_area">
+								<input type="radio" name="gender" class="css-radio" id="man_lbl" checked=""/>
+								<label for="man_lbl">남</label>
+								<input type="radio" name="gender" class="css-radio" id="woman_lbl"/>
+								<label for="woman_lbl">여</label>
+							</div>
+						</li>
+						<li class="clear">
+							<label for="comment_lbl" class="tit_lbl pilsoo_item">문의내용</label>
+							<div class="app_content"><textarea name="comment" id="comment_lbl" class="w100p" placeholder="내용을 입력해 주세요." required></textarea></div>
+						</li>
+						<li class="clear">
+							<label for="agree_lbl" class="tit_lbl pilsoo_item">개인정보 활용동의</label>
+							<div class="app_content">
+								<input type="checkbox" name="agree" class="css-checkbox" id="agree_lbl"required checked/>
+								<label for="agree_lbl">동의함</label>
+								</div>
+						</li>
 					</ul>
 					<p class="btn_line">
-					<button class="btn_baseColor">회원가입</button>
+					<button class="btn_baseColor">등록</button>
 					</p>	
 				</fieldset>
 			</form>
