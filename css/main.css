@@ -61,7 +61,7 @@ header {
 	width: 150px;
 	height: 80px;
 	background: url(../img/lllogo.png) no-repeat;
-	background-size: 200px 100px !important;
+	background-size: 200px 60px !important;
 	background-position: center center !important;
 	text-indent: -9999px;
 	overflow: hidden;
