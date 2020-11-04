@@ -201,7 +201,7 @@ input::placeholder {
 	/* top:1px; */
 	content: '*';
 	display: inline-block;
-	position: absolute;
+	position: absolute;    /* --------------------- */
 	left: 5px;
 	width: 15px;
 	font-weight: bold;
@@ -248,7 +248,7 @@ input::placeholder {
 	display: inline-block;
 	height: 45px;
 	padding: 0 10px;
-	background-color: #fff;
+	/* background-color: #fff; */                  /*            ssssssssssssssss */
 	line-height: normal;
 	font-size: 15px;
 }

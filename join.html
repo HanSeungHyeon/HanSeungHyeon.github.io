@@ -10,6 +10,7 @@
 <link rel="stylesheet" href="css/tablet.css">
 <link rel="stylesheet" href="css/pc.css">
 <link rel="stylesheet" href="css/board.css">
+<link rel="stylesheet" href="css/join.css">
 <script src="js/jquery-1.11.3.min.js"></script>
 <script src="js/jquery.smooth-scroll.min.js"></script>
 <script src="js/main.js"></script>
@@ -17,57 +18,6 @@
 <script src="js/additional-methods.js"></script>
 <script src="js/jquery.validate.js"></script>
 <style>
-.radio_area{
-	padding-left: 20px;
-	height: 40px;
-	padding-top: 10px;
-	box-sizing: border-box;
-}
-.css-radio{
-	overflow: hidden;
-	position: absolute;
-	left: -1000px;
-	width: 1px;
-	height: 1px;
-}
-.css-radio + label{
-	display: inline-block;
-	padding-left: 20px !important;
-	margin-right: 20px;
-	background: url(./img/bg_radio.png)no-repeat 0 0;
-	cursor: pointer;
-	font-size: 15px;
-}
-.css-radio:checked + label{
-	background-position: 0 -50px;
-}
-.checkbox_area{
-	padding-left: 20px;
-	height: 40px;
-	padding-top: 10px;
-	box-sizing: border-box;
-}
-.css-checkbox{
-	overflow: hidden;
-	position: absolute;
-	left: -1000px;
-	width: 1px;
-	height: 1px;
-}
-.css-checkbox + label{
-	display: inline-block;
-	height: 20px;
-	padding-left: 30px !important;
-	line-height: 20px !important;
-	background: url(./img/bg_checkbox.png)no-repeat 0 0;
-	background-size: 20px;
-	cursor: pointer;
-	font-size: 15px;
-	-moz-user-select: none;
-}
-.css-checkbox:checked + label{
-	background-position: 0 -20px;
-}
 
 </style>
 <script>
@@ -184,7 +134,7 @@ $(document).ready(function() {
 						</li>
 						<li class="clear">
 							<label for="tel_lbl" class="tit_lbl pilsoo_item">연락처</label>
-							<div class="app_content"><input type="tel" name="tel" class="w100p" id="tel_lbl" placeholder="연락처'-'없이 숫자만 입력해주세요" required/></div>
+							<div class="app_content"><input type="digits" name="tel" class="w100p" id="tel_lbl" placeholder="연락처'-'없이 숫자만 입력해주세요" required/></div>
 						</li>
 						<li class="clear">
 							<label for="gender_lbl" class="tit_lbl pilsoo_item">성별</label>
@@ -208,7 +158,7 @@ $(document).ready(function() {
 						</li>
 					</ul>
 					<p class="btn_line">
-					<button class="btn_baseColor">등록</button>
+					<button class="btn_baseColor">회원가입</button>
 					</p>	
 				</fieldset>
 			</form>
