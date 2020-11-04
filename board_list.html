@@ -13,23 +13,20 @@
 <script src="js/jquery-1.11.3.min.js"></script>
 <script src="js/jquery.smooth-scroll.min.js"></script>
 <script src="js/main.js"></script>
-<!-- CDN 컨텐츠 딜리버리 네트워크/ 외부 css,Js를 네트워크로 배달받아 사용하는 것-->
-<!-- <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous"> -->
-<!-- <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script> -->
 <style>
 
 </style>
 <script>
-	$(document).ready(function(){
-		//라이브러리 사용 안하고 오리지널 J쿼리 만드는 유효성검사(아래)
-		$("#search_form").submit(function(){ //검색 버튼을 클릭 =전송 했을 때
-			var search_keyword = $("input[name=search_keyword]").val();
-			if(search_keyword == "") {
-				alert("검색어는 필수입니다.");
-				return false; //조건이 맞으면 전송중지
-			}
-		});
+$(document).ready(function() {
+	//라이브러리 사용않하고, 오리지널 j쿼리로 만드는 유효성(아래)
+	$("#search_form").submit(function(){ //검색버튼을 클릭=전송했을때.
+		var search_keyword = $("input[name=search_keyword]").val();
+		if(search_keyword == "") {
+			alert("검색어는 빈 값으로 검색할 수 없습니다.!");
+			return false;//조건이 맞으면, 전송중지.
+		}
 	});
+});
 </script>
 </head>
 <body>
@@ -96,8 +93,7 @@
 	
 	<!-- 메인콘텐츠영역 -->
 	<div id="container">
-		<!-- //PC슬라이드영역 -->
-   		<!-- 메인상단위치표시영역 -->
+		<!-- 메인상단위치표시영역 -->
 		<div class="location_area customer">
 			<div class="box_inner">
 				<h2 class="tit_page">스프링 <span class="in">in</span> 자바</h2>
@@ -116,9 +112,8 @@
 			<form id="search_form" name="search_form" action="board_list.html" class="minisrch_form">
 				<fieldset>
 					<legend>검색</legend>
-					<!-- name 태그가 있어야만 검색이 가능하다. -->
 					<input name="search_keyword" type="text" class="tbox" title="검색어를 입력해주세요" placeholder="검색어를 입력해주세요">
-					<button class="btn_srch">검색</a>
+					<button class="btn_srch">검색</button>
 				</fieldset>
 			</form>
 			<!-- //검색폼영역 -->
@@ -219,7 +214,6 @@
 		<!-- //메인본문영역 -->
 	</div>
 	<!-- //메이콘텐츠영역 -->
-
 	<!-- 푸터메뉴및사업자정보영역 -->
 	<footer>
 		<div class="foot_area box_inner">
@@ -228,8 +222,8 @@
 				<li><a href="javascript:;">개인정보취급방침</a></li>
 			</ul>
 			<h2>스프링</h2>
-            <p class="addr">OOOO OOOOO OOOO OOOOOOOOO OOOOO <span class="gubun">/</span>
-				<span class="br_line">대표전화 <span class="space0">02-1234-5678</span> <span class="gubun">/</span>
+            <p class="addr">OOOO OOOOO OOOO OOOOOOOOO OOOOO <span class="gubun">/</span>        
+				<span class="br_line">대표전화 <span class="space0">02-1234-5678</span> <span class="gubun">/</span>        
 					<span class="br_line">E-mail : <span class="space0"> admin@OOOO OOOOO.com</span></span>
 				</span>
 			</p>
