@@ -4,8 +4,10 @@
 - 파이어폭스 개발자도구의 스타일 탭사용
 - 기존 PC용 > 태블릿용 > 모바일용 CSS작업순서를 [모바일용 > 태블릿용 > PC용] 으로 변경작업
 #### 20201104(수)
+- 메인페이지 로고 와 슬라이드(모바일용/PC용)
 - 테이블 display:none -> block
 - 테이블 display:none -> table-cell처리
+- 애로우함수 : 윈7에서 지원안함
 #### 크로스브라우징 처리
 - 브라우저 E11, 크롬, 파이어폭스, 오페라
 - 브라우저 교차 검사 후 처리
@@ -22,6 +24,13 @@
 - 만약에 white-space : wrap 이라면
 - 마지막 교시
 - 입니다.
+- css 값에 대한 수정: 값이 3개 일때 = padding:40px 0 0;
+- 40px(위), 0(좌우) , 0(아래)
+- vertical(수직-세로) :top, middle, bottom
+- horizontal(수평-가로): left, center, right
+- table tr(table row가로줄),
+- th(table header),
+- td(table data)
 - vertical(수직) : top , middle , bottom
 -horizontal(수평) : left , center , right
 - 유효성검사 : 예전에는 자바스크립트처리
