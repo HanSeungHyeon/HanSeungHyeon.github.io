@@ -4,7 +4,26 @@
 - 파이어폭스 개발자도구의 스타일 탭사용
 - 기존 PC용 > 태블릿용 > 모바일용 CSS작업순서를 [모바일용 > 태블릿용 > PC용] 으로 변경작업
 #### 20201105(목)
-- 배열 : 데이터(자료)표현방식
+- css : 계층구조에서 > 의미는  
+- $("ul.large li");  ul 안쪽의 대메뉴 + 중메뉴까지 포함
+- $("ul.large > li"); ul 안쪽의 대메뉴1, 대메뉴2만 포함
+- 메뉴1차, 2차
+<ul class="large">
+    <li> 대메뉴1
+        <ul class="middle">
+              <li>중메뉴1-1</li>
+              <li>중메뉴1-2</li>
+       </ul>
+ </li>
+    <li>대메뉴2
+        <ul class="middle">
+             <li>중메뉴2-1</li>
+             <li>중메뉴2-1</li>
+       </ul>
+    </li>
+</ul>  
+- $("ul > li");
+- 배열 : 데이터(자료) 구조(인덱스: 순서 0부터시작)
 - 공공데이터처리(빅데이터): Json데이터로 자료가 전송받고, 전송합니다.
 - Json(제이슨)데이터구조 : (아래)
 - 키(key 속성) : 밸류(value 값) -> 가공(파싱)해서 화면에 뿌려주는 방식
@@ -15,6 +34,11 @@
 - {name:'둘약국', maskcount:100, lat(위도):300, lon{위도}:200}
 - {name:'셋약국', maskcount:0, lat(위도):300, lon{위도}:200} ];
 - 피싱하는 과정 : alert(bigData[0] ['name']); -> 하나약국
+- DOM앨리먼트 : <body>, <p>, <div>, <input>, <label>
+- 돔을 제어할 때 사용 : J쿼리(자바스크립트 라이브러리)
+- 예) 동적으로 <label>태그같은 DOM을 추가/삭제/스타일
+- $("#write_form")=document.getElementByld("write_form)
+- div li{ 스타일지정; }
 #### 20201104(수)
 - input 입력태그 : type[text|password|radio|checkbox|list]
 - 메인페이지 로고 와 슬라이드(모바일용/PC용)
