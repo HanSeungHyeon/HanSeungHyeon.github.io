@@ -8,25 +8,26 @@
     <script>
         $(document).ready(function(){
             $("#addElement").click(function(){
-                $(document.body).css("background", "blue");
-                // $appendTo (this)("<div><p>내부추가</p></div>"); 
-                /* 앞의 값과 동일 ("#addElement");*/
-                $(this).append("<div><p>내부추가</p></div>");
-                // $(타겟).append("타겟 내부 다음에 추가할 내용")
-                $(this).after("<div><p>외부추가</p></div>");
-                // $(타겟).after("타겟 외부 다음에 추가할 내용")
-                // var count = $("div").size(); 출력되는 값은 아래와 동일
-                var count = $("div").length;
-                alert("div 테그의 개수는" + count + "개 입니다");
+        //         $(document.body).css("background", "blue");
+        //         // $appendTo (this)("<div><p>내부추가</p></div>"); 
+        //         /* 앞의 값과 동일 ("#addElement");*/
+        //         $(this).append("<div><p>내부추가</p></div>");
+        //         // $(타겟).append("타겟 내부 다음에 추가할 내용")
+        //         $(this).after("<div><p>외부추가</p></div>");
+        //         // $(타겟).after("타겟 외부 다음에 추가할 내용")
+        //         // var count = $("div").size(); 출력되는 값은 아래와 동일
+        //         var count = $("div").length;
+        //         alert("div 테그의 개수는" + count + "개 입니다");
+        // });
+        $("#addElement").bind("click",function(){
+            alert('버튼 클릭 이벤트 방식2');
         });
+    
         });
-        jQuery(function(){
-
-        });
-        $(function(){
-
-        });
-        // context 영역의 내용을 말합니다.
+        
+        
+        
+                // context 영역의 내용을 말합니다.
     </script>
 </head>
 <body>
